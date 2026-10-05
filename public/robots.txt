@@ -1,0 +1,7 @@
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Host & Sitemap location
+Host: https://rasmantech.web.id
+Sitemap: https://rasmantech.web.id/sitemap.xml

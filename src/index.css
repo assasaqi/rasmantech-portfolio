@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+ html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    @apply bg-natural-50 text-natural-900 dark:bg-natural-950 dark:text-natural-100 font-sans antialiased selection:bg-accent/20 selection:text-accent;
+  }
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  @apply bg-white/70 dark:bg-natural-900/60 backdrop-blur-md border border-natural-200/60 dark:border-natural-800/50 shadow-soft rounded-2xl transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply border-accent/40 shadow-xl -translate-y-1;
+}
+
+/* Gradients Natural */
+.bg-natural-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
+}
