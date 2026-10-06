@@ -27,7 +27,7 @@ export const projectsData = [
     description: "Spesialis antar-jemput bandara, pelabuhan, dan transfer antar destinasi di Pulau Lombok dengan armada bersih serta driver profesional.",
     fullDescription: "Sistem reservasi dan landing page interaktif untuk penyedia jasa transportasi wisata di Lombok. Memudahkan pelanggan melihat pilihan armada, estimasi harga rute perjalanan, dan menghubungi admin secara langsung via WhatsApp.",
     tech: ["React", "Tailwind CSS", "NodeJS", "PostgreSQL"],
-    link: "https://dafatih-transport.rasmantech.web.id/",
+    link: "https://dafatihtransport.com/",
     features: [
       "Desain Responsif & Mobile First",
       "Katalog Armada & Rute Lengkap",
