@@ -1,16 +1,73 @@
-# React + Vite
+Rasmantech Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Selamat datang di repositori portofolio web Rasmantech. Proyek ini merupakan aplikasi web portofolio personal yang dibangun menggunakan React, Vite, dan Tailwind CSS untuk menampilkan profil, keterampilan, serta proyek-proyek yang telah dikerjakan.
 
-Currently, two official plugins are available:
+🛠️ Teknologi yang Digunakan
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Frontend: React + Vite
 
-## React Compiler
+Styling: Tailwind CSS + PostCSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Linter & Formatter: ESLint
 
-## Expanding the ESLint configuration
+📁 Struktur Direktori
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+rasmantech-portfolio/
+├── public/
+│   ├── robots.txt
+│   └── sitemap.xml
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   │       ├── foto_1.png
+│   │       └── foto_2.png
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── postcss.config.js
+└── README.md
+
+
+🚀 Cara Menjalankan Proyek Secara Lokal
+
+PRASYARAT
+
+Pastikan Anda sudah menginstal Node.js (versi 16 atau lebih baru) dan npm di perangkat Anda.
+
+LANGKAH-LANGKAH
+
+Kloning Repositori
+
+git clone https://github.com/username/rasmantech-portfolio.git
+cd rasmantech-portfolio
+
+
+Instal Depensi
+
+npm install
+
+
+Jalankan Server Pengembang (Development Server)
+
+npm run dev
+
+
+Aplikasi akan berjalan di http://localhost:5173 (atau port sesuai konfigurasi Vite Anda).
+
+Build untuk Produksi
+
+npm run build
+
+
+Pratinjau Hasil Build
+
+npm run preview
+
+
+📄 Lisensi
+
+Proyek ini dibuat untuk keperluan portofolio pribadi. Seluruh hak cipta dilindungi.
