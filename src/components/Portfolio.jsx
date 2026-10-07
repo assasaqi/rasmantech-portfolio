@@ -77,7 +77,7 @@ export default function Portfolio() {
 
         {/* Swiper Slider Section */}
         <Swiper
-          key={filter} // Mengatur reset slider saat filter kategori berubah
+          key={filter}
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={16}
           slidesPerView={1}
@@ -98,44 +98,64 @@ export default function Portfolio() {
             <SwiperSlide key={project.id} className="!h-auto flex">
               <div
                 onClick={() => setSelectedProject(project)}
-                className="glass-card p-4 sm:p-5 flex flex-col justify-between group cursor-pointer hover:border-accent/50 transition-all duration-300 w-full h-full min-h-full"
+                className="glass-card flex flex-col justify-between group cursor-pointer hover:border-accent/50 transition-all duration-300 w-full h-full min-h-full overflow-hidden rounded-2xl border border-natural-200/80 dark:border-natural-800/80 bg-white dark:bg-natural-900"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-semibold text-accent dark:text-emerald-400 bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full">
-                      {project.category}
-                    </span>
-                    <span className="text-xs text-natural-400 group-hover:text-accent flex items-center gap-1 transition-colors">
-                      <Info className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Detail</span>
-                    </span>
-                  </div>
-
-                  <h3 className="text-base sm:text-lg font-bold text-natural-900 dark:text-natural-100 mb-1.5 group-hover:text-accent transition-colors duration-200">
-                    {project.title}
-                  </h3>
-                  <p className="text-natural-600 dark:text-natural-400 text-xs leading-relaxed mb-3 line-clamp-3">
-                    {project.description}
-                  </p>
-                </div>
-
-                <div>
-                  <div className="flex flex-wrap gap-1 mb-3">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[10px] sm:text-[11px] bg-natural-100 dark:bg-natural-800/60 text-natural-700 dark:text-natural-300 border border-natural-200/60 dark:border-natural-700/50 px-2 py-0.5 rounded font-mono"
-                      >
-                        {t}
+                {/* Header Image Preview (Jika ada) */}
+                {project.image && (
+                  <div className="relative w-full h-36 sm:h-40 overflow-hidden bg-natural-100 dark:bg-natural-800">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                      <span className="text-[11px] text-white font-medium flex items-center gap-1">
+                        <Info className="w-3.5 h-3.5" /> Klik untuk detail
                       </span>
-                    ))}
+                    </div>
+                  </div>
+                )}
+
+                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[11px] font-semibold text-accent dark:text-emerald-400 bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full">
+                        {project.category}
+                      </span>
+                      <span className="text-xs text-natural-400 group-hover:text-accent flex items-center gap-1 transition-colors">
+                        <Info className="w-3.5 h-3.5" /> <span className="hidden sm:inline">Detail</span>
+                      </span>
+                    </div>
+
+                    <h3 className="text-base sm:text-lg font-bold text-natural-900 dark:text-natural-100 mb-1.5 group-hover:text-accent transition-colors duration-200">
+                      {project.title}
+                    </h3>
+                    <p className="text-natural-600 dark:text-natural-400 text-xs leading-relaxed mb-3 line-clamp-3">
+                      {project.description}
+                    </p>
                   </div>
 
-                  {project.link && project.link !== '#' && (
-                    <div className="inline-flex items-center gap-1.5 text-xs text-accent dark:text-emerald-400 font-medium group/link">
-                      <span>Lihat Detail Proyek</span>
-                      <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                  <div>
+                    {/* Tech Stack Badges */}
+                    <div className="flex flex-wrap gap-1 mb-3">
+                      {project.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[10px] sm:text-[11px] bg-natural-100 dark:bg-natural-800/60 text-natural-700 dark:text-natural-300 border border-natural-200/60 dark:border-natural-700/50 px-2 py-0.5 rounded font-mono"
+                        >
+                          {t}
+                        </span>
+                      ))}
                     </div>
-                  )}
+
+                    {/* Link External */}
+                    {project.link && project.link !== '#' && (
+                      <div className="inline-flex items-center gap-1.5 text-xs text-accent dark:text-emerald-400 font-medium group/link">
+                        <span>Lihat Detail Proyek</span>
+                        <ExternalLink className="w-3.5 h-3.5 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
