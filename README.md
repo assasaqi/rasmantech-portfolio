@@ -1,6 +1,7 @@
 Rasmantech Portfolio
 
-Selamat datang di repositori portofolio web Rasmantech. Proyek ini merupakan aplikasi web portofolio personal yang dibangun menggunakan React, Vite, dan Tailwind CSS untuk menampilkan profil, keterampilan, serta proyek-proyek yang telah dikerjakan.
+Selamat datang di repositori portofolio web Rasmantech. 
+Proyek ini merupakan aplikasi web portofolio personal yang dibangun menggunakan React, Vite, dan Tailwind CSS untuk menampilkan profil, keterampilan, serta proyek-proyek yang telah dikerjakan.
 
 🛠️ Teknologi yang Digunakan
 
@@ -9,28 +10,6 @@ Frontend: React + Vite
 Styling: Tailwind CSS + PostCSS
 
 Linter & Formatter: ESLint
-
-📁 Struktur Direktori
-
-rasmantech-portfolio/
-├── public/
-│   ├── robots.txt
-│   └── sitemap.xml
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   │       ├── foto_1.png
-│   │       └── foto_2.png
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package.json
-├── postcss.config.js
-└── README.md
-
 
 🚀 Cara Menjalankan Proyek Secara Lokal
 
