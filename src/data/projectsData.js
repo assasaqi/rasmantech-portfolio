@@ -1,10 +1,9 @@
 // src/data/projects.js
-import img1 from '../assets/images/img_1.png';
-import img2 from '../assets/images/img_2.png';
-import img3 from '../assets/images/img_3.png';
-import img4 from '../assets/images/img_4.jpg';
-import img5 from '../assets/images/img_5.jpeg';
-
+import img1 from '../assets/images/project/img_1.png';
+import img2 from '../assets/images/project/img_2.jpg';
+import img3 from '../assets/images/project/img_3.png';
+import img4 from '../assets/images/project/img_4.jpg';
+import img5 from '../assets/images/project/img_5.jpeg';
 
 export const projectsCategories = [
   'Semua',
